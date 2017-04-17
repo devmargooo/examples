@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Страница приложения</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="page-wrapper">
+	<header class="main-header">
+		<div class="main-header__inner">
+			<a class="main-header__logo" href=""></a>
+			<nav class="main-header__nav">
+				<ul class="main-header__nav-ul">
+					<li class="main-header__nav-li"><a class="main-header__nav-item" href="#">ГЛАВНАЯ</a></li>
+					<li class="main-header__nav-li"><a class="main-header__nav-item main-header__nav-item_red" href="#">КАТАЛОГ ПРИЛОЖЕНИЙ</a></li>
+					<li class="main-header__nav-li"><a class="main-header__nav-item" href="#">О КОМПАНИИ</a></li>
+				</ul>
+			</nav>
+			<div style="clear: both"></div>
+      <div class="basket-pic"></div>
+      <div class="basket-count-field"></div>
+		</div>
+	</header>
+	<section class="page-innerbody apps-page-innerbody">
+    <section class="apps">
+      <header class="apps__header">
+        <h1 class="apps__heading">Каталог приложений</h1>
+      </header>
+      <ul class="apps__list"></ul>
+    </section>
+    <section class="catalog catalog_product">
+      <h1 class="catalog__heading catalog__heading_product"></h1>
+      <div class="catalog__description">
+        <div class="catalog__description-date"></div>
+        <div class="catalog__description-about">
+        <p class="catalog__description-about-description">
+        </p>
+        <span class="catalog__description-about_bolder catalog__description-about-requirements_bolder"></span>
+        <p class="catalog__description-about-requirements">
+        </p>
+        <p class="catalog__description-about-price">
+          <span class="catalog__description-about_bolder catalog__description-about-price_bolder"></span>
+          <span class="catalog__description-about-price-price"></span>
+        </p>
+        </div>
+      </div>
+      <div class="catalog__product-image"></div>
+      <div style="clear: both"></div>
+      <h1 class="catalog__heading catalog__heading_functions">ОСНОВНЫЕ ФУНКЦИИ</h1>
+      <ul class="catalog__features-list">
+      </ul>
+    </section>
+  </section>
+</div><!--page-wrapper-->
+
+<template class="template-apps-item">
+<li class="apps__item"><a class="apps__anchor" href="#"></a></li>
+</template>
+
+<template class="template-product-card"><!--
+--><section class="catalog catalog_product">
+    <h1 class="catalog__heading catalog__heading_product"></h1>
+    <div class="catalog__description">
+      <div class="catalog__description-date"></div>
+      <div class="catalog__description-about">
+      <p class="catalog__description-about-description"></p>
+      <p class="catalog__description-about-requirements">
+        <span class="catalog__description-about_bolder catalog__description-about-requirements_bolder"></span>
+        <span class="catalog__description-about-requirements-requirements"></span>
+      </p>
+      <p class="catalog__description-about-price">
+        <span class="catalog__description-about_bolder catalog__description-about-price_bolder"></span>
+        <span class="catalog__description-about-price-price"></span>
+      </p>
+      </div>
+    </div>
+    <div class="catalog__product-image"></div>
+    <a href="#" class="button catalog__button-add">В корзину</a>
+    <div style="clear: both"></div>
+    <h1 class="catalog__heading catalog__heading_functions">ОСНОВНЫЕ ФУНКЦИИ</h1>
+    <ul class="catalog__functions-list">
+    </ul>
+  </section><!--
+--></template>
+
+<template class="template-catalog-functions-item"><!--
+--><li class="catalog__functions-item"></li><!--
+--></template>
+
+<template class="template-nav"><nav class="payment-main-nav">
+		<ul class="payment-main-nav__progress">
+    </ul>
+  </nav></template>
+
+<template class="template-nav-item-visited"><li class="payment-main-nav__progress-item">
+    <a class="payment-main-nav__progress-item-link" href="">
+      <div class="payment-main-nav__point payment-main-nav__point_visited payment-main-nav__point_done"></div>
+      <div class="payment-main-nav__point-caption payment-main-nav__point-caption_visited"></div>
+    </a>
+  </li></template>
+
+<template class="template-nav-item-current"><li class="payment-main-nav__progress-item">
+    <a class="payment-main-nav__progress-item-link" href="#">
+      <div class="payment-main-nav__point payment-main-nav__point_visited"></div>
+      <div class="payment-main-nav__point-caption payment-main-nav__point-caption_visited"></div>
+    </a>
+  </li></template>
+
+<template class="template-nav-item-unvisited"><li class="payment-main-nav__progress-item">
+    <a class="payment-main-nav__progress-item-link" href="#">
+      <div class="payment-main-nav__point payment-main-nav__point_unvisited"></div>
+      <div class="payment-main-nav__point-caption payment-main-nav__point-caption_unvisited"></div>
+    </a>
+  </li></template>
+
+<template class="template-payment-table"><div class="payment-table-container">
+  <table class="payment-table payment-wrapper__table-positioner">
+
+  </table>
+</div></template>
+
+<template class="template-payment-table-header"><tr class="payment-table__header">
+    <th></th>
+    <th>СТОИМОСТЬ</th>
+    <th>ИТОГО</th>
+    <th></th>
+  </tr></template>
+
+<template class="template-payment-table-row"><tr class="payment-table__row">
+    <td class="payment-table__data-cell payment-table__row-caption-column"></td>
+    <td class="payment-table__data-cell payment-table__data-price-column"></td>
+    <td class="payment-table__data-cell payment-table__data-sum-column"></td>
+    <td class="payment-table__data-cell payment-table__delete-button-container">
+      <button class="payment-table__delete-button"></button>
+    </td>
+  </tr></template>
+
+<template class="template-inner-basket-body-under-nav-step-0"><div class="inner-basket-body-under-nav">
+
+  </div></template>
+
+<template class="template-inner-basket-body-under-nav-step-1"><div class="payment-area payment-wrapper__payment-area-positioner">
+    <div class="payment-area__switch">
+      <div class="payment-area__payment-switch-item payment-area__payment-switch-item_selected">КАРТА</div>
+      <div class="payment-area__payment-switch-item">PAYPAL</div>
+    </div>
+    <div class="payment-area__main-area_bycard">
+      <div class="payment-area__card payment-area__card-face">
+        <form class="payment-area__form_face">
+          <input class="payment-area__input payment-area__input-card-number" type="number" placeholder="Номер карты" tabindex="1">
+          <input class="payment-area__input payment-area__input-month" type="number" placeholder="Месяц" tabindex="2">
+          <input class="payment-area__input payment-area__input-year" type="number" placeholder="Год" tabindex="3">
+          <input class="payment-area__input payment-area__input-name" type="text" placeholder="Имя Владельца" tabindex="4">
+        </form>
+        <div class="payment-area__master-card"></div>
+        <div class="payment-area__visa"></div>
+      </div>
+      <div class="payment-area__card payment-area__card-back">
+        <div class="payment-area__magnetic-line"></div>
+        <form class="payment-area__form_back">
+          <input class="payment-area__input payment-area__input_back payment-area__input-cvv" type="number" placeholder="CVV" tabindex="5">
+          <div class="payment-area__cvv-label">Код на обратной стороне</div>
+        </form>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+  </div>
+  <a href="" class="button button-refuse payment-wrapper__button-come-back">Вернуться назад</a>
+  <a href="" class="button button-execute payment-wrapper__button-pay">Оплатить</a>
+  <div style="clear: both"></div></template>
+
+<template class="template-inner-basket-body-under-nav-step-2"><form class="customer-form payment-wrapper__customer-form-positioner">
+    <div class="customer-form__label">КОНТАКТНАЯ ИНФОРМАЦИЯ</div>
+    <input type="text" class="customer-form__input customer-form__input_longer" placeholder="Фамилия" autofocus tabindex="1">
+    <input type="text" class="customer-form__input" placeholder="Имя" tabindex="2">
+    <input type="number" class="customer-form__input customer-form__input_longer" placeholder="Телефон" tabindex="3">
+    <input type="text" class="customer-form__input" placeholder="E-mail" tabindex="4">
+  </form>
+  <a href="#" class="button button-execute payment-wrapper__button-finish">ЗАВЕРШИТЬ</a></template>
+
+<template class="template-inner-basket-body-under-nav-step-3">
+  <div class="payment-wrapper__done-message-container">
+    <div class="payment-wrapper__done-icon">
+      <div class="payment-wrapper__done-icon-checkmark"></div>
+    </div>
+    <div class="payment-wrapper__done-message-success">Поздравляем!<br>Ваш заказ был принят!</div>
+    <div class="payment-wrapper__done-message-callback">В ближайшее время с Вами свяжется наш менеджер<br>
+      для уточнения данных по заказу<br> и расскажет что же ожидает вас в будущем.</div>
+  </div>
+  <a href="" class="button payment-wrapper__button-close">Закрыть</a>
+</template>
+
+<div class="template-animation" hidden>
+  <div class="popup">
+      <img src = "assets/loading.gif" class="popup-pic">
+  </div>
+</div>
+<script src="js/apps.js"></script>
+</body>
+</html>

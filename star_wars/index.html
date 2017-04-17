@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+  <title>STAR WARS</title>
+  <script type="text/javascript" src="scripts/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/sw.js"></script>
+  <script type="text/javascript" src="scripts/sw_directives.js"></script>
+</head>
+<body ng-app="sw">
+<section class="page-wrapper">
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="clouds"></div>
+  <section class="inner" ng-controller="SWController as swc">
+    <header>
+      <h2>STAR WARS</h2>
+    </header>
+    <ul class="nav nav-tabs sw_switch">
+      <li ng-class=""><a href ng-click="swc.setGenderFilter('male')">Male</a></li>
+      <li ng-class=""><a href ng-click="swc.setGenderFilter('female')">Female</a></li>
+      <li ng-class=""><a href ng-click="swc.setGenderFilter('n/a')">Robots</a></li>
+    </ul>
+    <cards data="swc.people" filter="swc.getGenderFilter()"></cards>
+  </section>
+</section>
+</body>
+</html>

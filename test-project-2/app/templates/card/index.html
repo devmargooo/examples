@@ -1,0 +1,22 @@
+<!--Replaced 'appcard.item' by 'appcard.appcard.item' for routing -->
+
+<h1 class="catalog__heading catalog__heading_product">{{appcard.item.title}}</h1>
+<div class="catalog__product-image catalog__product-image-standart"></div>
+<div style="clear: both"></div>
+<section class="apptabs" ng-controller="AppTabsContoller as apptabs">
+  <ul class="nav nav-tabs">
+    <li ng-class="{active: apptabs.tab === 1}"><a href ng-click="apptabs.setTab(1)">Дата</a></li>
+    <li ng-class="{active: apptabs.tab === 2}"><a href ng-click="apptabs.setTab(2)">Цена</a></li>
+    <li ng-class="{active: apptabs.tab === 3}"><a href ng-click="apptabs.setTab(3)">Описание</a></li>
+  </ul>
+  <div class="apptabs_value" ng-show="apptabs.isSelected(1)">
+    {{apptabs.parseDate(appcard.item.lastUpdate)}}
+  </div>
+  <div class="apptabs_value" ng-show="apptabs.isSelected(2)">
+    {{appcard.item.price}}
+  </div>
+  <div class="apptabs_value" ng-show="apptabs.isSelected(3)">
+    {{appcard.item.description}}
+  </div>
+</section>
+<a ng-href="/#!" class="glyphicon glyphicon-circle-arrow-left"></a>

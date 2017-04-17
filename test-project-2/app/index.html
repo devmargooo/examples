@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html ng-app="applications">
+<head>
+  <meta charset="UTF-8">
+  <title>Страница категории</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="scripts/vendor/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/vendor/angular-route.min.js"></script>
+  <script type="text/javascript" src="scripts/applications.js"></script>
+  <script type="text/javascript" src="scripts/applications-directives.js"></script>
+  <script type="text/javascript" src="scripts/controllers/product-table-controller.js"></script>
+  <script type="text/javascript" src="scripts/controllers/app-card-controller.js"></script>
+  <script type="text/javascript" src="scripts/controllers/app-tabs-controller.js"></script>
+  <script type="text/javascript" src="scripts/controllers/page-controller.js"></script>
+  <script type="text/javascript" src="scripts/controllers/applications-controller.js"></script>
+</head>
+<body>
+<div class="page-wrapper">
+	<header class="main-header">
+		<div class="main-header__inner">
+			<a class="main-header__logo" href="#"></a>
+			<nav class="main-header__nav">
+				<ul class="main-header__nav-ul">
+					<li class="main-header__nav-li"><a class="main-header__nav-item" href="#">ГЛАВНАЯ</a></li>
+					<li class="main-header__nav-li"><a class="main-header__nav-item main-header__nav-item_red" href="#">КАТАЛОГ ПРИЛОЖЕНИЙ</a></li>
+					<li class="main-header__nav-li"><a class="main-header__nav-item" href="#">О КОМПАНИИ</a></li>
+				</ul>
+			</nav>
+			<div style="clear: both"></div>
+		</div>
+	</header>
+<section class="page-innerbody apps-page-innerbody" ng-controller="PageController as page" ng-click = "page.click($event)">
+  <section class="apps">
+    <header class="apps__header">
+      <h1 class="apps__heading">Каталог приложений</h1>
+    </header>
+    <ul class="apps__list">
+      <li class="apps__item"><a class="apps__anchor" href></a>Title0</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title1</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title2</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title3</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title4</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title5</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title6</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title7</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title8</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title9</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title10</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title11</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title12</li>
+      <li class="apps__item"><a class="apps__anchor" href></a>Title13</li>
+    </ul>
+  </section>
+  <section class="catalog" ng-controller="ApplicationsController as applications">
+    <div ng-view></div>
+  </section>
+</section>
+</div><!--page-wrapper-->
+</body>
+</html>

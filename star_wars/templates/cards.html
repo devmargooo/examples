@@ -1,0 +1,27 @@
+<div class="sw_cards_controller" ng-controller="CardAreaController as cardarea">
+
+<article class="sw_card" ng-controller="CardController as card" ng-repeat="item in data" ng-show="item.gender == filter" ng-class="{sw_card_male: item.gender === 'male', sw_card_female: item.gender == 'female'}">
+  <div class="sw_card_small_wrapper" ng-click="card.setFullState(1)">
+    <img class="sw_logo" src="assets/logo.png">
+    <div class="sw_card_data-area"><span class="sw_card_field">Name:</span><span class="sw_card_data"> {{item.name}}</span></div>
+    <div class="sw_card_data-area"><span class="sw_card_field">Gender:</span><span class="sw_card_data"> {{item.gender}}</span></div>
+    <div class="sw_card_data-area"><span class="sw_card_field">Height:</span><span class="sw_card_data"> {{item.height}}</span></div>
+    <div class="sw_card_data-area"><span class="sw_card_field">Mass:</span><span class="sw_card_data"> {{item.mass}}</span></div>
+    <div class="sw_card_data-area"><span class="sw_card_field">Skin color:</span><span class="sw_card_data"> {{item.skin_color}}</span></div>
+  </div>
+  <div class="sw_card_full_wrapper" ng-show="card.getFullState() == 1 && cardarea.getFullState() == 0" ng-click="card.setFullState(0)">
+    <div class="sw_card_full_area_for_modal"></div>
+    <div class="sw_card_full">
+      <img class="sw_logo" src="assets/logo.png">
+      <div class="sw_card_data-area"><span class="sw_card_field">Name:</span><span class="sw_card_data"> {{item.name}}</span></div>
+      <div class="sw_card_data-area"><span class="sw_card_field">Gender:</span><span class="sw_card_data"> {{item.gender}}</span></div>
+      <div class="sw_card_data-area"><span class="sw_card_field">Height:</span><span class="sw_card_data"> {{item.height}}</span></div>
+      <div class="sw_card_data-area"><span class="sw_card_field">Mass:</span><span class="sw_card_data"> {{item.mass}}</span></div>
+      <div class="sw_card_data-area"><span class="sw_card_field">Skin color:</span><span class="sw_card_data"> {{item.skin_color}}</span></div>
+      <div class="sw_card_data-area"><span class="sw_card_field">Eye color:</span><span class="sw_card_data"> {{item.eye_color}}</span></div>
+      <div class="sw_card_data-area"><span class="sw_card_field">Hair color:</span><span class="sw_card_data"> {{item.hair_color}}</span></div>
+      <button class="sw_card_close" ng-click="card.setFullState(0)">CLOSE</button>
+    </div>
+  </div>
+</article>
+</div>

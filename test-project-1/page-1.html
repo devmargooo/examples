@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<head>
+  <meta charset="UTF-8">
+  <title>Главная страница</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="page-wrapper">
+	<header class="main-header">
+		<div class="main-header__inner">
+			<a class="main-header__logo" href="#"></a>
+			<nav class="main-header__nav">
+				<ul class="main-header__nav-ul">
+					<li class="main-header__nav-li"><a class="main-header__nav-item" href="#">ГЛАВНАЯ</a></li>
+					<li class="main-header__nav-li"><a class="main-header__nav-item main-header__nav-item_red" href="#">КАТАЛОГ ПРИЛОЖЕНИЙ</a></li>
+					<li class="main-header__nav-li"><a class="main-header__nav-item" href="#">О КОМПАНИИ</a></li>
+				</ul>
+			</nav>
+			<div style="clear: both"></div>
+		</div>
+	</header>
+	<section class="page-innerbody main-page-innerbody">
+		<article class="packages">
+			<header class="packages__header">
+				<a href="#" class="packages__header-caption">ПАКЕТЫ ПРИЛОЖЕНИЙ</a>
+					<div class="packages__search-container">
+						<input class="packages__search" type="search" placeholder="Поиск приложения">
+						<div class="packages__search-icon"></div>
+					</div>
+				<div style="clear: both"></div>
+			</header>
+			<ul class="packages__list">
+			</ul>
+      <div class="packages__arrow packages__arrow-left noselect"><</div>
+      <div class="packages__arrow packages__arrow-right noselect">></div>
+      <div class="packages__slider-nav-markers">
+        <div class="packages__slider-nav-point"></div>
+        <div class="packages__slider-nav-point"></div>
+        <div class="packages__slider-nav-point"></div>
+        <div class="packages__slider-nav-point"></div>
+        <div class="packages__slider-nav-point"></div>
+        <div class="packages__slider-nav-point"></div>
+        <div class="packages__slider-nav-point"></div>
+      </div>
+		</article>
+    <article class="categories page-innerbody__categories-positioner">
+      <article class="categories__item">
+        <header class="categories__item-header">
+          <a href="#" class="categories__item-header-caption">МНОГОПОТОКОВЫЕ ПРИЛОЖЕНИЯ</a>
+          <div class="categories__item-expand"></div>
+          <div style="clear: both"></div>
+        </header>
+        <ul class="categories__list categories__list_multithreaded-aps">
+          <li class="categories__list-item">
+            <div class="categories__list-item-inner">
+              <a class="categories__list-item-anchor" href="#">Финансовый мониторинг</a><br>
+              <span class="categories__list-item-categories-sum">приложений: 5</span>
+            </div>
+          </li>
+          <li class="categories__list-item">
+            <div class="categories__list-item-inner">
+              <a class="categories__list-item-anchor" href="#">Бухгалтерский учет</a><br>
+              <span class="categories__list-item-categories-sum">приложений: 2</span>
+            </div>
+          </li>
+          <li class="categories__list-item">
+            <div class="categories__list-item-inner">
+              <a class="categories__list-item-anchor" href="#">Кредитование</a><br>
+              <span class="categories__list-item-categories-sum">приложений: 12</span>
+            </div>
+          </li>
+          <li class="categories__list-item">
+            <div class="categories__list-item-inner">
+              <a class="categories__list-item-anchor" href="#">Пластиковые карты</a><br>
+              <span class="categories__list-item-categories-sum">приложений: 29</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <article class="categories__item">
+        <header class="categories__item-header">
+          <a href="#" class="categories__item-header-caption">ОДНОПОТОЧНЫЕ ПРИЛОЖЕНИЯ</a>
+          <div class="categories__item-expand"></div>
+          <div style="clear: both"></div>
+        </header>
+        <ul class="categories__list categories__list_single-threaded-aps">
+          <li class="categories__list-item">
+            <div class="categories__list-item-inner">
+              <a class="categories__list-item-anchor" href="#">Расчетный центр</a><br>
+              <span class="categories__list-item-categories-sum">приложений: 69</span>
+            </div>
+          </li>
+          <li class="categories__list-item">
+            <div class="categories__list-item-inner">
+              <a class="categories__list-item-anchor" href="#">Банковские гарантии</a><br>
+              <span class="categories__list-item-categories-sum">приложений: 44</span>
+            </div>
+          </li>
+          <li class="categories__list-item">
+            <div class="categories__list-item-inner">
+              <a class="categories__list-item-anchor" href="#">Казначейство</a><br>
+              <span class="categories__list-item-categories-sum">приложений: 80</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </article>
+	</section>
+</div><!--page-wrapper-->
+<template class="template-package-item"><li class="packages__item">
+    <a href="#" class="packages__package-picture"></a>
+    <a href="#" class="packages__package-name"></a>
+    <span class="packages__package-date"></span>
+  </li></template>
+<script type="text/javascript" src="js/slider.js"></script>
+</body>
+</html>

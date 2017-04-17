@@ -1,0 +1,17 @@
+<h1 class="catalog__heading catalog__heading_list">КАТАЛОГ - АРЕНДА СЕЙФОВ</h1>
+<table class="catalog__table">
+  <tr class="catalog__heading-row">
+            <th class="catalog__pic-col"></th>
+            <th class="catalog__name-col">Наименование</th>
+            <th class="catalog__description-col">Описание</th>
+            <th class="catalog__price-col catalog__th_long-text">Стоимость<br>(тыс у.е.)</th>
+          </tr>
+          <!--Old solution without routing <tr class="catalog__row" ng-repeat="item in data">-->
+          <tr class="catalog__row" ng-repeat="item in productstable.data">
+            <td class="catalog__td"><a class="catalog__td_a" ng-href='/#!/app/{{item.id}}'><img class="catalog__product-td-pic" ng-src="assets/product-pic.png" alt=""></a></td>
+            <td class="catalog__td catalog__product-td-description-name"><a class="catalog__td_a" ng-href='/#!/app/{{item.id}}'>{{item.title}}<br><span class="catalog__product-td-description-date">{{productstable.parseDate(item.lastUpdate)}}</span></a></td>
+            <td class="catalog__td catalog__td-description">{{item.description}}</td>
+            <td class="catalog__td catalog__td-price">{{item.price}}</td>
+          </tr>
+
+</table>
